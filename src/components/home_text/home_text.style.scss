@@ -6,23 +6,23 @@
     .primary_text{
         color: white;
         font-weight: bolder;
-        font-size: 64px;
+        font-size: 3.5vw;
     }
     
     .secondary_text{
         color: $lightgreen_color;
         font-weight: bolder;
-        font-size: 48px;
+        font-size: 3vw;
     }
     
     .tertiary_text{
         color: $lightgrey_color;
         font-weight: bolder;
-        font-size: 36px;
+        font-size: 2.5vw;
     }
     .contact-btn{
         position: relative;
-        top: 20px;
+        top: 1rem;
         left: 0;
         height: fit-content;
         width: fit-content;

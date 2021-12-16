@@ -1,9 +1,19 @@
 import React from 'react'
 import './tech-section.style.scss'
 
-function TechSection({expanded}) {
+function TechSection({expanded, tech}) {
     return (
-        <div className={expanded? 'tech-section expanded' : 'tech-section'}></div>
+        <div className={expanded? 'tech-section expanded' : 'tech-section'}>
+            {
+                tech.map(tech => {
+                    return (
+                        <div className='tech'>
+                        &bull; {tech}
+                        </div>
+                    )
+                })
+            }
+        </div>
     )
 }
 
