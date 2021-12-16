@@ -1,0 +1,12 @@
+@import '../../project/project.style.scss';
+
+.tech-section{
+    height: 100%;
+    width: 0%;
+    background: blueviolet;
+    transition: all $transition-time ease-in-out;
+    &.expanded{
+        @include expanded-part;
+        width: 30%;
+    }
+}

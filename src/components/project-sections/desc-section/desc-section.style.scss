@@ -1,0 +1,44 @@
+@import '../../project/project.style.scss';
+@import '../../../colors.scss';
+
+.desc-section{
+    height: 100%;
+    width: 0%;
+    background: $darkgreen_color;
+    transition: all $transition-time ease-in-out;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $black_color;
+    &.expanded{
+        @include expanded-part;
+        width: 30%;
+    }
+    .desc-headline{
+        font-size: 0px;
+        font-family: inherit;
+        font-weight: bolder;
+        padding: 5px 5px;
+        margin: 10px;
+        border: 2px solid $black_color;
+        background-color: $black_color;
+        color: $darkgreen_color;
+        &.expanded{
+            font-size: 26px;
+            transition: font-size 0.2s ease-out 0.0s;
+        }
+    }
+    .desc-par{
+        font-size: 0px;
+        font-family: inherit;
+        font-weight: bolder;
+        border-left: 0px solid $black_color;
+        padding: 5px 7px;
+        &.expanded{
+            font-size: 16px;
+            transition: font-size 0.1s ease-out 0.2s;
+            border-left: 2px solid $black_color;
+        }
+    }
+}

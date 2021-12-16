@@ -1,0 +1,33 @@
+@import '../../colors.scss';
+
+
+.text_container{
+    font-family: inherit;
+    .primary_text{
+        color: white;
+        font-weight: bolder;
+        font-size: 64px;
+    }
+    
+    .secondary_text{
+        color: $lightgreen_color;
+        font-weight: bolder;
+        font-size: 48px;
+    }
+    
+    .tertiary_text{
+        color: $lightgrey_color;
+        font-weight: bolder;
+        font-size: 36px;
+    }
+    .contact-btn{
+        position: relative;
+        top: 20px;
+        left: 0;
+        height: fit-content;
+        width: fit-content;
+    }
+}
+
+
+
