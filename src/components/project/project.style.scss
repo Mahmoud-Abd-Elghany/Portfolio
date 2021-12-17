@@ -18,6 +18,7 @@ $transition-time: 0.3s;
         justify-content: center;
         align-items: center;
         transition: all 0.2s ease-in-out;
+        overflow: hidden;
         
         &.expanded{
             transform: scale(0.99);
@@ -43,10 +44,7 @@ $transition-time: 0.3s;
             &:hover{
                 opacity: 1;
                 transition: all 0.3s ease-in-out;
-                & .background-hover{
-                    opacity: 0.1;
-                    cursor: pointer;
-                }
+                cursor: pointer;
             }
             &.expanded{
                 @include expanded-part;

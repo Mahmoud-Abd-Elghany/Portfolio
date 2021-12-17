@@ -9,13 +9,14 @@
     color: white;
     display: flex;
     flex-direction: column;
+   
     &.expanded{
         @include expanded-part;
         width: 35%;
         padding: 3vw;
     }
     .desc-headline{
-        font-size: 0px;
+        font-size: 0vw;
         font-family: inherit;
         font-weight: bolder;
         color: white;
@@ -31,14 +32,18 @@
         }
     }
     .desc-par{
-        font-size: 0vw;
         font-family: inherit;
         font-weight: 500;
         text-align: left;
         line-height: 1.2rem;
+        font-size: 1vw;
+        visibility: hidden;
+        opacity: 0;
         &.expanded{
-            font-size: 1vw;
-            transition: font-size 0.2s ease-in-out 0.2s;
+            visibility: visible;
+            transition: visibility 0s ease-in 0.3s, opacity 0.3s ease-in-out;
+            opacity: 1;
+            display: list-item;
         }
     }
 }

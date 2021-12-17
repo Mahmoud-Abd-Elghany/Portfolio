@@ -15,11 +15,7 @@ export default function HomeText() {
                 <span className='tertiary_text'>a </span>
                 <span className='secondary_text'>Frontend Developer</span>
                 <span className='tertiary_text'>.</span>
-            </div>
-            <div className='contact-btn'>
-                <Button>Contact me</Button>
-            </div>
-            
+            </div>         
         </div>
     )
 }

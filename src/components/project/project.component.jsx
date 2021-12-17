@@ -14,7 +14,6 @@ const Project = ({projectData:{name, desc, tech, links, img}}) => {
                     <div className={addExpandedClass('img-section', expanded)} style = {{backgroundImage: `url(${img})`}} onClick={() => setExpanded(!expanded)}>
                         <div className='background-hover'></div>
                     </div>
-                    
                     <DescSection expanded={expanded} name={name} desc={desc}/>
                     <TechSection expanded = {expanded} tech= {tech}/>
                     <LinksSection expanded = {expanded} links={links}/>

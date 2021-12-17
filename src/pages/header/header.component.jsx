@@ -20,9 +20,14 @@ function Header() {
                     Projects
                     </Button>
                 </Link>
-                <Link className="link-style" to="/About">
-                    <Button active={path === "/About"}>
-                    About
+                <Link className="link-style" to="/Skills">
+                    <Button active={path === "/Skills"}>
+                    Skills
+                    </Button>
+                </Link>
+                <Link className="link-style" to="/Contact">
+                    <Button active={path === "/Contact"}>
+                    Contact
                     </Button>
                 </Link>
             </div>  
