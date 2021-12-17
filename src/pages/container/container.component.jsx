@@ -3,6 +3,7 @@ import {Switch, Route, useLocation} from "react-router-dom";
 import {CSSTransition, TransitionGroup } from "react-transition-group";
 import Home from '../home/home.page';
 import ProjectsPage from '../projects/projects.page';
+import ContactPage from '../Contact/contact.page';
 import './container.style.scss'
 
 function Container() {
@@ -19,6 +20,7 @@ function Container() {
                     <Switch location={location}>
                         <Route exact path="/" component={Home}/>
                         <Route path="/Projects" component={ProjectsPage}/>
+                        <Route path="/Contact" component={ContactPage}/>
                     </Switch>
                 </CSSTransition>
             </TransitionGroup>

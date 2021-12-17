@@ -1,0 +1,18 @@
+.form-container{
+    position: relative;
+    top: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.363);
+    box-shadow: 5px 5px 6px black;
+    border-radius: 1%;
+    width: 30vw;
+    height: 70vh;
+    padding: 2vw;
+    margin-left: 20%;
+    #email{
+    }
+}
