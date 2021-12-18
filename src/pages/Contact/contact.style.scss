@@ -1,18 +1,36 @@
+@import '../../colors.scss';
 .form-container{
     position: relative;
-    top: 10vh;
+    top: 5vh;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: rgba(255, 255, 255, 0.363);
-    box-shadow: 5px 5px 6px black;
-    border-radius: 1%;
-    width: 30vw;
-    height: 70vh;
-    padding: 2vw;
-    margin-left: 20%;
-    #email{
+    flex-direction: column;
+    background-color: rgba(110, 110, 110, 0.521);
+    background: linear-gradient(to bottom right, $black_color 40%, $grey_color 80%, $darkgreen_color 100%);
+    // box-shadow: 5px 5px 6px black;
+    width: 40vw;
+    height: 90vh;
+    padding: 0vw 2vw;
+    margin-left: 15%;
+}
+.send-btn{
+    margin: 0vw 2vw;
+    margin-top: 0vw;
+    width: 90%;
+    font-size: 1.7vw;
+    padding: 8px 0%;
+    border: none;
+    background: rgba(235, 234, 234, 0);
+    border-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(-120deg, $lightgrey_color, $lightgreen_color) 1;
+    color: white;
+    font-weight: bolder;
+    transition: all ease-in-out 0.2s 0.1s;
+    cursor: pointer;
+    &:focus{
+        transform: scale(0.95);
+        border-image: linear-gradient(18deg, $lightgrey_color, $lightgreen_color) 1;
+        transition: all ease-in-out 0.2s;
     }
 }

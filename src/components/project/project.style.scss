@@ -12,7 +12,6 @@ $transition-time: 0.3s;
         height: 20vh;
         width: 20vh;
         box-shadow: 2px 2px 4px black;
-        border: 1px solid black;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -26,6 +25,7 @@ $transition-time: 0.3s;
             height: 35vh;
             transition: all $transition-time ease-in-out;
             margin-left: -5vw;
+            background: linear-gradient(135deg, $grey_color 0%, $black_color 80%, $black_color 92%);
         }
         &:hover{
             transform: scale(0.99);

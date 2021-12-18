@@ -2,11 +2,16 @@ import React from 'react'
 import './textfield.style.scss'
 
 function TextField({type, placeholder, onChange, value}) {
-    console.log('value',value);
     return (
             <div class="form__group field">
-                <input type={`${type}`} class="form__field" placeholder={`${placeholder}`} name={`${placeholder}`} id={`${placeholder.toLowerCase()}`} required onChange={onChange} value={value}/>
-                <label for="name" class="form__label">{placeholder}</label>
+                {
+                    type === 'textarea'?
+                    <textarea type={`${type}`} className='form__field message__field' name={`${placeholder}`} id={`${placeholder.toLowerCase()}`} placeholder='Enter you message here...' required onChange={onChange} value={value}/>
+                    :
+                    <input type={`${type}`} className='form__field' name={`${placeholder}`} id={`${placeholder.toLowerCase()}`} placeholder={`${placeholder}...`} required onChange={onChange} value={value}/>
+                }
+                
+                <label for="name" className="form__label">{placeholder}</label>
             </div>
     )
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from '../button/button.component'
 import './home_text.style.scss'
 
 export default function HomeText() {

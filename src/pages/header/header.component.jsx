@@ -8,8 +8,8 @@ function Header() {
     const path = location.pathname;
     return (
         <div>
-            <div className={path === "/Projects" ? "background-sec project-section": "background-sec"}></div>
-            <div className={path === "/Projects" ? "btn-section  project" : "btn-section"}>
+            <div className={path === "/Projects" || path === "/Contact" ? "background-sec project-section": "background-sec"}></div>
+            <div className={path === "/Projects" || path === "/Contact" ? "btn-section  project" : "btn-section"}>
                 <Link className="link-style" to="/">
                     <Button active={path === "/"}>
                     Home
