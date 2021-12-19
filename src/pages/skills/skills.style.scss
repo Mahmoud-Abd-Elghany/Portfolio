@@ -1,0 +1,67 @@
+@import '../../colors.scss';
+
+.skills-container{
+    width: 40vw;
+    margin-top: 20vh;
+    margin-left: 10vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 30px;
+    flex-wrap: wrap;
+    transform: rotate(5deg);
+    transition: all 0.3s ease-in-out;
+    .skill-list{
+        flex: 1 0 25%;
+        height: 5vw;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+        align-items: left;
+        .skill-component{
+            width: fit-content;
+            display: flex;
+            color: white;
+            align-items: center;
+            column-gap: 8px;
+            font-size: 1.7vw;
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                transform: translateX(0.5vw);
+                transition: all 0.2s ease-in-out;
+            }
+            &.full{
+                transform: rotate(-10deg);
+                cursor: pointer;
+                color: $lightgreen_color;
+                transition: transform 0.2s ease-in-out;
+                font-size: 2vw;
+                &:hover{
+                    transform: translateX(1vw);
+                    transition: all 0.6s ease-in-out;
+                }
+            }
+        }
+        .subskill-component{
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+            margin-left: 2vw;
+            width: fit-content;
+            color: rgb(255, 255, 255);
+            font-size: 1.4vw;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            &.expanded{
+                opacity: 1;
+                transform: translateX(10px);
+                transition: all 0.3s ease-in-out;
+            }
+            &:hover{
+                transform: translateX(3px);
+                transition: all 0.1s ease-in-out;
+            }
+        }
+    }  
+}

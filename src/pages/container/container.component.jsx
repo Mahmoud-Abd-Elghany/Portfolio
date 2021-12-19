@@ -5,6 +5,7 @@ import Home from '../home/home.page';
 import ProjectsPage from '../projects/projects.page';
 import ContactPage from '../Contact/contact.page';
 import './container.style.scss'
+import SkillsPage from '../skills/skills.page';
 
 function Container() {
     const location = useLocation();
@@ -21,6 +22,7 @@ function Container() {
                         <Route exact path="/" component={Home}/>
                         <Route path="/Projects" component={ProjectsPage}/>
                         <Route path="/Contact" component={ContactPage}/>
+                        <Route path="/Skills" component={SkillsPage}/>
                     </Switch>
                 </CSSTransition>
             </TransitionGroup>
