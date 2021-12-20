@@ -10,7 +10,7 @@ import SkillsPage from '../skills/skills.page';
 function Container() {
     const location = useLocation();
     return (
-        <div>
+        <div className='cont'>
             <TransitionGroup>
                 <CSSTransition
                     key = {location.key}
