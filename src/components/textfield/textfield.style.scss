@@ -34,3 +34,38 @@
     }
 }
 
+@media only screen and (max-width: 800px) {
+    .form__group{
+        display:flex;
+        position: relative;
+        flex-direction: column-reverse;
+        width: 100%;
+        font-family: inherit;
+        padding: 0 5%;
+        .form__field{
+            width: 90%;
+            margin: 8px 0;
+            padding: 10px 4px;
+            box-sizing: border-box;
+            border: 1px solid rgb(165, 165, 165);
+            background: rgb(226, 226, 226);
+            color: black;
+            font-size: 1.8vh;
+            &.message__field{
+                height: 25vh;
+                resize: none;
+            }
+            &:focus{
+                outline-style: none;
+            }
+        }
+        .form__label{
+            margin-bottom: 2px;
+            border-left: 2px solid $darkgreen_color;
+            padding-left: 8px;
+            font-size: 2vh;
+            font-weight: 500;
+            color: rgb(255, 255, 255);
+        }
+    }
+}

@@ -9,6 +9,11 @@
   transition: all 0.4s ease-in;
 }
 
+.cont{
+  height: 80vh;
+  width: 100vw;
+}
+
 /* appear on page-load */
 .fade-appear {
   opacity: 0;

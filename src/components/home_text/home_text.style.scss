@@ -20,6 +20,64 @@
         font-weight: bolder;
         font-size: 2.5vw;
     }
+    .links-list{
+        display: flex;
+        justify-content: space-evenly;
+        width: 15vw;
+        position: relative;
+        margin-left: -2vw;
+        margin-top: 1vh;
+        & .icon-home{
+            color: $darkgreen_color;
+            & .icon{
+                font-size: 1.3vw;
+            }
+            &:hover{
+                color: $lightgreen_color;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .text_container{
+        font-family: inherit;
+        width: 100vw;
+        .primary_text{
+            color: white;
+            font-weight: bolder;
+            font-size: 7vw;
+        }
+        
+        .secondary_text{
+            color: $lightgreen_color;
+            font-weight: bolder;
+            font-size: 6vw;
+        }
+        
+        .tertiary_text{
+            color: $lightgrey_color;
+            font-weight: bolder;
+            font-size: 5vw;
+        }
+        .links-list{
+            display: flex;
+            justify-content: space-evenly;
+            width: 15vh;
+            position: relative;
+            margin-left: -1vh;
+            margin-top: 1vh;
+            & .icon-home{
+                color: $darkgreen_color;
+                & .icon{
+                    font-size: 1rem;
+                }
+                &:hover{
+                    color: $lightgreen_color;
+                }
+            }
+        }
+    }
 }
 
 

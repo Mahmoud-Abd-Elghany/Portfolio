@@ -34,13 +34,12 @@
                 transition: all 0.2s ease-in-out;
             }
             &.full{
-                transform: rotate(-10deg);
                 cursor: pointer;
                 color: $lightgreen_color;
                 transition: transform 0.2s ease-in-out;
                 font-size: 2vw;
                 &:hover{
-                    transform: translateX(1vw);
+                    transform: translateX(2vw);
                     transition: all 0.6s ease-in-out;
                 }
             }

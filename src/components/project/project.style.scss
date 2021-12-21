@@ -67,3 +67,68 @@ $transition-time: 0.3s;
     }
 }
 
+@media only screen and (max-width: 800px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .card-container{
+            height: 10vh;
+            width: 10vh;
+            box-shadow: 2px 2px 4px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s ease-in-out;
+            overflow: hidden;
+            
+            &.expanded{
+                transform: scale(0.99);
+                width: 40vw;
+                height: 90vh;
+                transition: all $transition-time ease-in-out;
+                margin-left: -5vw;
+                background: linear-gradient(135deg, $grey_color 0%, $black_color 80%, $black_color 92%);
+            }
+            &:hover{
+                transform: scale(0.99);
+                box-shadow: 0px 0px 0px black;
+            }
+            .img-section{
+                height: 100%;
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+                transition: all $transition-time ease-in-out;
+                .background-hover{
+                    background: $black_color;
+                    opacity: 0;
+                }
+                &:hover{
+                    opacity: 1;
+                    transition: all 0.3s ease-in-out;
+                    cursor: pointer;
+                }
+                &.expanded{
+                    @include expanded-part;
+                }
+            }
+        }
+        .title{
+            border-left: 0.4vh solid $darkgreen_color;
+            font-size: 4vw;
+            height: 13vh;
+            color: white;
+            margin-left: 2vw;
+            padding-left: 2vw;
+            font-weight: 600;
+            transition-delay: 0.2s;
+            &.expanded{
+                font-size: 0;
+                border-left: 0px solid white;
+            }
+        }
+    }
+}
+

@@ -6,7 +6,7 @@ import emailjs from 'emailjs-com';
 function ContactPage() {
     const [formData, setFormData] = useState({
         email: '',
-        subject:'',
+        name:'',
         message: '',
     })
 
@@ -33,7 +33,7 @@ function ContactPage() {
     return (
         <form onSubmit={submitHandler} className='form-container'>
             <TextField type = 'email' placeholder='Email' onChange={changeHandler} value={formData.email}/>
-            <TextField type = 'input' placeholder='Subject' onChange={changeHandler} value={formData.subject}/>
+            <TextField type = 'input' placeholder='Name' onChange={changeHandler} value={formData.name}/>
             <TextField type = 'textarea' placeholder='Message' onChange={changeHandler} value={formData.message}/>
             <button className='send-btn' type='submit'>Send <i class="fas fa-paper-plane"></i></button>
         </form>

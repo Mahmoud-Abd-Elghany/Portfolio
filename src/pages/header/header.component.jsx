@@ -7,7 +7,7 @@ function Header() {
     const location = useLocation();
     const path = location.pathname;
     return (
-        <div>
+        <div className='header-container'>
             <div className={path === "/Projects" || path === "/Contact" ? "background-sec project-section": "background-sec"}></div>
             <div className={path === "/Projects" || path === "/Contact" ? "btn-section  project" : "btn-section"}>
                 <Link className="link-style" to="/">

@@ -16,8 +16,8 @@ function App() {
       <div className ='App' onMouseMove={mouseMoveHandler}>
             <Container/>
             <Header/>
-            <div className="sticky-1" style = {{transform: `translate(${x/50}px, ${y/90}px)`}}></div>
-            <div className="sticky-2" style = {{transform: `translate(${-(x/50)}px, ${y/90}px)`}}></div>
+            <div className="sticky-1" style = {{transform: `translate(${x/50}px, ${y/50}px)`}}></div>
+            <div className="sticky-2" style = {{transform: `translate(${-(x/50)}px, ${y/50}px)`}}></div>
       </div>
     </Router>
   );
