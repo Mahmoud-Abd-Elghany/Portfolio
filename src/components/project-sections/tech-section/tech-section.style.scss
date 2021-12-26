@@ -27,6 +27,37 @@
         border-left: $darkgreen_color 2px solid;
         border-right: $darkgreen_color 2px solid;
     }
-    .tech{
+}
+
+@media only screen and (max-width: 800px) {
+    .tech-section{
+        height: 0%;
+        width: 100%;
+        background: transparent;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        gap: 0vw 0.5vw;
+        background-color: transparent;
+        color: rgb(235, 235, 235);
+        font-size: 1.6vh;
+        font-weight: 600;
+        visibility: hidden;
+        opacity: 0;
+        &.expanded{
+            height: 18%;
+            width: 80%;
+            padding: 1.5vh 0vw;
+            visibility: visible;
+            transition: visibility 0s ease-in 0.3s, opacity 0.3s ease-in-out;
+            opacity: 1;
+            border-left: $darkgreen_color 0px solid;
+            border-right: $darkgreen_color 0px solid;
+            border-bottom: $darkgreen_color 2px solid;
+            border-top: $darkgreen_color 2px solid;
+        }
     }
 }

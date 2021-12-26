@@ -48,15 +48,15 @@
             color: rgba(211, 211, 211, 0.253);
             position: absolute;
             &.top-right{
-                width: 80%;
+                width: 80vw;
                 top: 23vh;
-                right: 2vw;
+                left: 20vw;
             }
             &.bottom-left{
                 font-size: 1rem;
-                width: 50%;
-                bottom: 23%;
-                margin-right: 15%;
+                width: 60vw;
+                top: 65vh;
+                left: 4vw;
             }
             .quotes{
                 color: rgb(172, 172, 172);

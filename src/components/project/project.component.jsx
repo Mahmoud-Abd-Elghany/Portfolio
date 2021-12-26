@@ -11,9 +11,7 @@ const Project = ({projectData:{name, desc, tech, links, img}}) => {
     return (
         <div className='container'>
             <div className={addExpandedClass('card-container', expanded)}>
-                    <div className={addExpandedClass('img-section', expanded)} style = {{backgroundImage: `url(${img})`}} onClick={() => setExpanded(!expanded)}>
-                        <div className='background-hover'></div>
-                    </div>
+                    <div className={addExpandedClass('img-section', expanded)} style = {{backgroundImage: `url(${img})`}} onClick={() => setExpanded(!expanded)}></div>
                     <DescSection expanded={expanded} name={name} desc={desc}/>
                     <TechSection expanded = {expanded} tech= {tech}/>
                     <LinksSection expanded = {expanded} links={links}/>

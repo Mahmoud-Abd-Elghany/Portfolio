@@ -53,31 +53,30 @@ text-decoration: none;
       background-color: $darkgreen_color;  /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to right, $darkgreen_color 0%, $grey_color 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       opacity: 1;
-      height: 100vh;
+      height: 12vh;
       width: 100vw;
       position: absolute;
-      right: 0%;
-      top:0%;
-      clip-path: polygon(0 88%, 100% 88%, 100% 100%, 0% 100%);
+      right: 0;
+      top: 88vh;
+      clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
       z-index: -1;
-      transition: 0.4s ease-in-out;
       &.project-section{
           background-color: $darkgreen_color;  /* Chrome 10-25, Safari 5.1-6 */
           background: linear-gradient(to right, $darkgreen_color 0%, $grey_color 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
           opacity: 1;
-          height: 100vh;
+          height: 12vh;
           width: 100vw;
           position: absolute;
-          right: 0%;
-          top:0%;
-          clip-path: polygon(0 88%, 100% 88%, 100% 100%, 0% 100%);
+          right: 0;
+          top: 88vh;
+          clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
           z-index: -1;
-          transition: 0.4s ease-in-out;
       }
   }
+
   .btn-section{
     position: absolute;
-    top: 92%;
+    top: 91%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -87,7 +86,7 @@ text-decoration: none;
     transition: all 0.3s ease-in 0.1s;
     &.project{
       position: absolute;
-      top: 92%;
+      top: 91%;
       right: 0%;
       display: flex;
       flex-direction: row;

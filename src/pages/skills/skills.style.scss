@@ -28,19 +28,14 @@
             align-items: center;
             column-gap: 8px;
             font-size: 1.7vw;
-            transition: all 0.2s ease-in-out;
-            &:hover{
-                transform: translateX(0.5vw);
-                transition: all 0.2s ease-in-out;
-            }
             &.full{
                 cursor: pointer;
                 color: $lightgreen_color;
-                transition: transform 0.2s ease-in-out;
+                transition: transform 0.1s ease-in-out;
                 font-size: 2vw;
                 &:hover{
                     transform: translateX(2vw);
-                    transition: all 0.6s ease-in-out;
+                    transition: all 0.3s linear;
                 }
             }
         }
@@ -59,11 +54,69 @@
                 transform: translateX(10px);
                 transition: all 0.3s ease-in-out;
             }
-            &:hover{
-                transform: translateX(3px);
-                transition: all 0.1s ease-in-out;
-            }
         }
     }  
 }
+}
+
+@media only screen and (max-width: 800px) {
+    .skills-page{
+        height: 90vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+    .skills-container{
+        width: 90vw;
+        margin-left: 10vw;
+        height: 70vh;
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+        align-items: left;
+        flex-wrap: wrap;
+        .skill-list{
+            flex: 1 0 33%;
+            height: 5vw;
+            display: flex;
+            flex-direction: column;
+            row-gap: 2vh;
+            align-items: left;
+            .skill-component{
+                width: fit-content;
+                display: flex;
+                color: white;
+                align-items: center;
+                text-align: left;
+                column-gap: 5px;
+                font-size: 2.2vh;
+                &.full{
+                    cursor: pointer;
+                    color: $lightgreen_color;
+                    transition: transform 0.1s ease-in-out;
+                    font-size: 2.2vh;
+                    &:hover{
+                        transform: translateX(2vw);
+                        transition: all 0.3s linear;
+                    }
+                }
+            }
+            .subskill-component{
+                display: flex;
+                align-items: center;
+                column-gap: 8px;
+                margin-left: 2vw;
+                width: fit-content;
+                color: rgb(255, 255, 255);
+                font-size: 1.8vh;
+                opacity: 0;
+                transition: all 0.3s ease-in-out;
+                &.expanded{
+                    opacity: 1;
+                    transform: translateX(10px);
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }  
+    }
+    }
 }
