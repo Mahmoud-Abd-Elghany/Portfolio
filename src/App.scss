@@ -10,11 +10,13 @@
 .sticky-1{
   z-index: -100;
   height: 15vw;
+  min-height: 250px;
   width: 15vw;
+  min-width: 250px;
   background: linear-gradient(180deg, $lightgrey_color 0%, $black_color 90%);
   position: absolute;
-  left: 3%;
-  top: 3%;
+  left: 10%;
+  top: 5%;
   z-index: -100;
   transition: all 0.9s linear;
 }
@@ -22,39 +24,26 @@
 .sticky-2{
   z-index: -100;
   height: 20vw;
+  min-height: 300px;
   width: 20vw;
+  min-width: 300px;
   background: linear-gradient(0deg, $grey_color 0%, $black_color 90%);
   position: absolute;
-  right: 33%;
-  bottom: 2%;
+  right: 30%;
+  bottom: 5%;
   z-index: -100;
   transition: all 0.9s linear;
 }
 
 @media only screen and (max-width: 800px) {
   .sticky-1{
-    z-index: -100;
-    height: 20vh;
-    width: 20vh;
-    background: linear-gradient(180deg, $lightgrey_color 0%, $black_color 90%);
-    position: absolute;
-    left: 3%;
-    top: 3%;
-    z-index: -100;
-    transition: all 0.9s linear;
+    left: 5%;
   }
-  
   .sticky-2{
-    z-index: -100;
-    height: 20vh;
-    width: 20vh;
-    background: linear-gradient(0deg, $grey_color 0%, $black_color 90%);
-    position: absolute;
-    right: 2%;
-    bottom: 20%;
-    z-index: -100;
-    transition: all 0.9s linear;
+    right: 5%;
+    bottom: 15%;
   }
+
 }
 
 

@@ -58,24 +58,6 @@
             font-weight: bolder;
             font-size: 5vw;
         }
-
-        .links-list{
-            display: flex;
-            justify-content: space-evenly;
-            width: 18vh;
-            position: relative;
-            margin-left: -2vw;
-            margin-top: 1vh;
-            & .icon-home{
-                color: $darkgreen_color;
-                & .icon{
-                    font-size: 1rem;
-                }
-                &:hover{
-                    color: $lightgreen_color;
-                }
-            }
-        }
     }
 }
 
