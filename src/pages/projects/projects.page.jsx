@@ -6,14 +6,15 @@ import './projects.page.scss'
 function ProjectsPage() {
     return (
         <div className='projects-container'>
-        {
-            projects.map( projectData => {
-                return (
-                        <Project projectData={projectData}/>
-                )
-            })
-        }
-            
+            <div className='projects-list'>
+            {
+                projects.map( projectData => {
+                    return (
+                            <Project projectData={projectData}/>
+                    )
+                })
+            }  
+            </div>
         </div>
     )
 }

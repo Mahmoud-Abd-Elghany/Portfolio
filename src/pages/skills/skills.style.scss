@@ -6,47 +6,45 @@
     display: flex;
     align-items: center;
 .skills-container{
-    width: 80%;
-    margin-left: 7vw;
-    height: 50%;
+    width: 90%;
+    height: 80%;
     display: flex;
     flex-direction: row;
-    column-gap: 10px;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     .skill-list{
-        flex: 1 0 25%;
-        height: 5vw;
+        width: 30%;
+        height: 0%;
         display: flex;
         flex-direction: column;
-        row-gap: 2vh;
-        align-items: left;
-        .skill-component{
-            width: fit-content;
+        row-gap: 1vh;
+        align-items: flex-start;
+        & .skill-component{
             display: flex;
             color: white;
             align-items: center;
-            column-gap: 8px;
-            font-size: 1.7vw;
+            column-gap: 10px;
+            font-size: 26px;
+            width: 100%;
             &.full{
                 cursor: pointer;
                 color: $lightgreen_color;
                 transition: transform 0.1s ease-in-out;
-                font-size: 2vw;
                 &:hover{
                     transform: translateX(2vw);
-                    transition: all 0.3s linear;
+                    transition: all 0.3s ease-in-out;
                 }
             }
         }
-        .subskill-component{
+        & .subskill-component{
             display: flex;
             align-items: center;
             column-gap: 8px;
             margin-left: 2vw;
             width: fit-content;
             color: rgb(255, 255, 255);
-            font-size: 1.4vw;
+            font-size: 18px;
             opacity: 0;
             transition: all 0.3s ease-in-out;
             &.expanded{
@@ -63,58 +61,20 @@
     .skills-page{
         height: 90vh;
         width: 100vw;
-        display: flex;
-        align-items: center;
+        justify-content: center;
     .skills-container{
-        width: 90vw;
-        margin-left: 10vw;
-        height: 70vh;
+        width: 80%;
+        height: 70%;
         display: flex;
         flex-direction: row;
-        column-gap: 10px;
-        align-items: left;
-        flex-wrap: wrap;
         .skill-list{
-            flex: 1 0 33%;
-            height: 5vw;
-            display: flex;
-            flex-direction: column;
-            row-gap: 2vh;
-            align-items: left;
-            .skill-component{
-                width: fit-content;
-                display: flex;
-                color: white;
-                align-items: center;
-                text-align: left;
+            & .skill-component{
                 column-gap: 5px;
-                font-size: 2.2vh;
-                &.full{
-                    cursor: pointer;
-                    color: $lightgreen_color;
-                    transition: transform 0.1s ease-in-out;
-                    font-size: 2.2vh;
-                    &:hover{
-                        transform: translateX(2vw);
-                        transition: all 0.3s linear;
-                    }
-                }
+                font-size: 20px;
             }
-            .subskill-component{
-                display: flex;
-                align-items: center;
-                column-gap: 8px;
-                margin-left: 2vw;
-                width: fit-content;
-                color: rgb(255, 255, 255);
-                font-size: 1.8vh;
-                opacity: 0;
-                transition: all 0.3s ease-in-out;
-                &.expanded{
-                    opacity: 1;
-                    transform: translateX(10px);
-                    transition: all 0.3s ease-in-out;
-                }
+            & .subskill-component{
+                margin-left: 4vw;
+                font-size: 12px;
             }
         }  
     }

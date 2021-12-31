@@ -2,14 +2,14 @@
 @import '../../../colors.scss';
 
 .links-section{
-    height: 70%;
+    height: 0%;
     width: 0%;
     transition: all $transition-time ease-in-out;
-
     display: none;
     &.expanded{
-        @include expanded-part;
         width: 10%;
+        height: 60%;
+        padding: 0 2%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -29,24 +29,20 @@
 
 @media only screen and (max-width: 800px) {
     .links-section{
-        height: 70%;
-        width: 0%;
-        transition: all $transition-time ease-in-out;
-    
-        display: none;
         &.expanded{
             height: 10%;
-            width: 90%;
+            width: 60%;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-around;
             align-items: center;
             flex-direction: row;
+            border-top: $darkgreen_color 2px solid;
         }
         .icon-custom{
             display: inline-block;
             color: $darkgreen_color;
             transition: color 0.2s ease-in-out;
-            font-size: 1.5vh;
+            font-size: 2.8vw;
             &:hover{
                 color: $lightgreen_color;
                 transition: color 0.2s ease-in-out;

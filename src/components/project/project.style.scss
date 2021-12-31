@@ -1,9 +1,6 @@
 @import '../../colors.scss';
 $transition-time: 0.3s;
-@mixin expanded-part{
-    width: 25%;
-    transition: all $transition-time ease-in-out;
-}
+
 .container{
     display: flex;
     flex-direction: row;
@@ -14,16 +11,14 @@ $transition-time: 0.3s;
         box-shadow: 2px 2px 4px black;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         transition: all 0.2s ease-in-out;
         overflow: hidden;
         &.expanded{
-            transform: scale(0.99);
-            width: 70vw;
+            width: 100%;
             height: 35vh;
             transition: all $transition-time ease-in-out;
-            margin-left: -5vw;
             background: linear-gradient(135deg, $grey_color 0%, $black_color 80%, $black_color 92%);
         }
         &:hover{
@@ -47,7 +42,8 @@ $transition-time: 0.3s;
                 cursor: pointer;
             }
             &.expanded{
-                @include expanded-part;
+                width: 60%;
+                transition: all $transition-time ease-in-out;
             }
         }
     }
@@ -67,11 +63,6 @@ $transition-time: 0.3s;
     }
 }
 
-@mixin expanded-part-mobile{
-    height: 100%;
-    width: 100%;
-    transition: all $transition-time ease-in-out;
-}
 @media only screen and (max-width: 800px) {
     .container{
         display: flex;
@@ -81,18 +72,14 @@ $transition-time: 0.3s;
         .card-container{
             height: 14vh;
             width: 14vh;
-            box-shadow: 2px 2px 4px black;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: space-between;
             transition: all 0.2s ease-in-out;
-            overflow: hidden;
             &.expanded{
-                transform: scale(1);
-                width: 42vw;
-                height: 75vh;
-                transition: all $transition-time ease-in-out;
-                margin-left: 0vw;
+                width: 60vw;
+                height: 80vh;
                 background: linear-gradient(135deg, $grey_color 0%, $black_color 80%, $black_color 92%);
             }
             &:hover{
@@ -100,22 +87,8 @@ $transition-time: 0.3s;
                 box-shadow: 0px 0px 0px black;
             }
             .img-section{
-                height: 100%;
-                width: 100%;
-                background-position: center;
-                background-size: cover;
-                transition: all $transition-time ease-in-out;
-                .background-hover{
-                    background: $black_color;
-                    opacity: 0;
-                }
-                &:hover{
-                    opacity: 1;
-                    transition: all 0.3s ease-in-out;
-                    cursor: pointer;
-                }
                 &.expanded{
-                    height: 40%;
+                    height: 35%;
                     width: 100%;
                 }
             }
@@ -125,15 +98,13 @@ $transition-time: 0.3s;
             border-top: 0.4vh solid $darkgreen_color;
             font-size: 5vw;
             height: fit-content;
-            color: white;
             margin-left: 0vw;
             padding-left: 0vw;
             margin-top: 2vh;
             padding-top: 1vh;
-            font-weight: 600;
             transition-delay: 0.2s;
             &.expanded{
-                height: 0vh;
+                height: 0;
                 padding: 0;
                 margin: 0;
                 font-size: 0;
