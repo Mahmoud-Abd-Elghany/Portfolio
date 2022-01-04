@@ -1,53 +1,50 @@
-@import '../../colors.scss';
+@import "../../colors.scss";
 
-.form__group{
-    display:flex;
-    position: relative;
-    flex-direction: column-reverse;
+.form__group {
+  display: flex;
+  position: relative;
+  flex-direction: column-reverse;
+  width: 100%;
+  font-family: inherit;
+  padding: 0 5%;
+  & .form__field {
     width: 100%;
-    font-family: inherit;
-    padding: 0 5%;
-    .form__field{
-        width: 100%;
-        margin: 8px 0;
-        padding: 10px 4px;
-        box-sizing: border-box;
-        border: 1px solid rgb(165, 165, 165);
-        background: rgb(226, 226, 226);
-        color: black;
-        font-size: 1.5vw;
-        &.message__field{
-            height: 25vh;
-            resize: none;
-        }
-        &:focus{
-            outline-style: none;
-        }
+    margin: 8px 0;
+    padding: 10px 4px;
+    box-sizing: border-box;
+    background: rgb(228, 228, 228);
+    color: $main-color;
+    font-size: $button;
+    &.message__field {
+      height: 20vh;
+      resize: none;
     }
-    .form__label{
-        margin-bottom: 2px;
-        border-left: 2px solid $darkgreen_color;
-        padding-left: 8px;
-        font-size: 1.7vw;
-        font-weight: 500;
-        color: rgb(255, 255, 255);
+    &:focus {
+      outline-style: none;
+      background: rgb(255, 255, 255);
     }
+  }
+  & .form__label {
+    margin-bottom: 2px;
+    font-size: $button;
+    color: $sub-color;
+  }
 }
 
 @media only screen and (max-width: 800px) {
-    .form__group{
-        padding: 0 5%;
-        .form__field{
-            box-sizing: border-box;
-            border: 1px solid rgb(165, 165, 165);
-            background: rgb(226, 226, 226);
-            color: black;
-            font-size: 3.7vw;
-        }
-        .form__label{
-            font-size: 4vw;
-            font-weight: 500;
-            color: rgb(255, 255, 255);
-        }
+  .form__group {
+    padding: 0 5%;
+    .form__field {
+      box-sizing: border-box;
+      border: 1px solid rgb(165, 165, 165);
+      background: rgb(226, 226, 226);
+      color: black;
+      font-size: 3.7vw;
     }
+    .form__label {
+      font-size: 4vw;
+      font-weight: 500;
+      color: rgb(255, 255, 255);
+    }
+  }
 }

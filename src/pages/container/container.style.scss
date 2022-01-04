@@ -1,45 +1,32 @@
-@mixin fade {
-    opacity: 0;
-  transform: translateX(20%);
-}
-
-@mixin fade-active {
-  opacity: 1;
-  transform: translateX(0%);
-  transition: all 0.4s ease-in;
-}
-
-.cont{
-  height: 100vh;
-  width: 100vw;
-}
 
 /* appear on page-load */
 .fade-appear {
   opacity: 0;
-  transform: translateX(-15%);
+  transform: scale(1);
 }
+
 .fade-appear.fade-appear-active {
-    opacity: 1;
-    transform: translateX(0%);
-    transition: transform 0.5s ease-in-out;
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 1200ms, transform 1200ms;
 }
 
 .fade-enter {
-    @include fade;
-    z-index: -1;
+  opacity: 0;
+  transform: scale(0.9);
 }
 .fade-enter.fade-enter-active {
-    @include fade-active;
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
 }
 
 .fade-exit {
-  transform: translateX(0%);
   opacity: 1;
 }
 
 .fade-exit.fade-exit-active {
-  transform: translateX(20%);
   opacity: 0;
-  transition: all 0.4s ease-in-out;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
 }

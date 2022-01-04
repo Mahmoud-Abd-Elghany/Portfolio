@@ -15,7 +15,7 @@ function Container() {
                 <CSSTransition
                     key = {location.key}
                     appear ={true}
-                    timeout={800}
+                    timeout={1200}
                     classNames="fade"
                     >
                     <Switch location={location}>

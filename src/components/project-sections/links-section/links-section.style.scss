@@ -1,53 +1,53 @@
-@import '../../project/project.style.scss';
-@import '../../../colors.scss';
+@import "../../project/project.style.scss";
+@import "../../../colors.scss";
 
-.links-section{
-    height: 0%;
-    width: 0%;
-    transition: all $transition-time ease-in-out;
-    display: none;
-    &.expanded{
-        width: 10%;
-        height: 60%;
-        padding: 0 2%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
+.links-section {
+  height: 0%;
+  width: 0%;
+  transition: all $transition-time ease-in-out;
+  display: none;
+  &.expanded {
+    width: 10%;
+    height: 60%;
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  }
+  .icon-custom {
+    display: inline-block;
+    color: $subtertiary-color;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: $sub-color;
+      transition: color 0.2s ease-in-out;
+      cursor: pointer;
     }
-    .icon-custom{
-        display: inline-block;
-        color: $darkgreen_color;
-        transition: color 0.2s ease-in-out;
-        &:hover{
-            color: $lightgreen_color;
-            transition: color 0.2s ease-in-out;
-            cursor: pointer;
-        }
-    }
+  }
 }
 
 @media only screen and (max-width: 800px) {
-    .links-section{
-        &.expanded{
-            height: 10%;
-            width: 60%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-direction: row;
-            border-top: $darkgreen_color 2px solid;
-        }
-        .icon-custom{
-            display: inline-block;
-            color: $darkgreen_color;
-            transition: color 0.2s ease-in-out;
-            font-size: 2.8vw;
-            &:hover{
-                color: $lightgreen_color;
-                transition: color 0.2s ease-in-out;
-                cursor: pointer;
-            }
-        }
+  .links-section {
+    &.expanded {
+      height: 10%;
+      width: 60%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      border-top: $sub-color 2px solid;
     }
+    .icon-custom {
+      display: inline-block;
+      color: $sub-color;
+      transition: color 0.2s ease-in-out;
+      font-size: 2.8vw;
+      &:hover {
+        color: $sub-color;
+        transition: color 0.2s ease-in-out;
+        cursor: pointer;
+      }
+    }
+  }
 }

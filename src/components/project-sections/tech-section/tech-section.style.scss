@@ -1,54 +1,53 @@
-@import '../../project/project.style.scss';
-@import '../../../colors.scss';
+@import "../../project/project.style.scss";
+@import "../../../colors.scss";
 
-.tech-section{
-    height: 60%;
-    width: 0%;
-    background: transparent;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: left;
-    text-align: center;
-    gap: 0vw 0.5vw;
-    background-color: transparent;
-    color: rgb(235, 235, 235);
-    font-size: 80%;
-    font-weight: 600;
-    visibility: hidden;
-    opacity: 0;
-    &.expanded{
-        width: 40%;
-        visibility: visible;
-        transition: visibility 0s ease-in 0.3s, opacity 0.3s ease-in-out;
-        opacity: 1;
-        padding: 0vw 1%;
-        border-left: $darkgreen_color 2px solid;
-        border-right: $darkgreen_color 2px solid;
-    }
+.tech-section {
+  height: 60%;
+  width: 0%;
+  background: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+  text-align: center;
+  gap: 0vw 0.5vw;
+  background-color: transparent;
+  font-size: $text;
+  font-weight: 500;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.1s ease-in-out 0.2s, opacity 0.2s ease-in-out;
+  &.expanded {
+    width: 40%;
+    transform: scale(1,1);
+    opacity: 1;
+    padding: 0vw 1%;
+    border-left: $sub-color 2px solid;
+    border-right: $sub-color 2px solid;
+  }
 }
 
 @media only screen and (max-width: 800px) {
-    .tech-section{
-        height: 0%;
-        width: 100%;
-        background: transparent;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
-        text-align: center;
-        & .tech{
-            width: 30%;
-        }
-        &.expanded{
-            height: fit-content;
-            width: 80%;
-            padding: 2% 0vw;
-            border-left: $darkgreen_color 0px solid;
-            border-right: $darkgreen_color 0px solid;
-            border-top: $darkgreen_color 2px solid;
-            row-gap: 2vh;
-        }
+  .tech-section {
+    height: 0%;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    & .tech {
+      width: 30%;
     }
+    &.expanded {
+      height: fit-content;
+      width: 80%;
+      padding: 2% 0vw;
+      border-left: $sub-color 0px solid;
+      border-right: $sub-color 0px solid;
+      border-top: $sub-color 2px solid;
+      row-gap: 2vh;
+    }
+  }
 }

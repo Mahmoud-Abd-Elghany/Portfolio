@@ -1,65 +1,51 @@
-@import '../../colors.scss';
+@import "../../colors.scss";
 
+.text_container {
+  font-family: inherit;
+  .primary_text {
+    color: $sub-color;
+    font-weight: bolder;
+    font-size: $heading;
+  }
 
-.text_container{
-    font-family: inherit;
-    .primary_text{
-        color: white;
-        font-weight: bolder;
-        font-size: 3.5vw;
+  .secondary_text {
+    color: $sub-color;
+    font-weight: bolder;
+    font-size: $subheading;
+    transition: color 0.5s ease-in-out;
+    & .react{
+      color: rgb(0, 128, 233);
     }
-    
-    .secondary_text{
-        color: $lightgreen_color;
-        font-weight: bolder;
-        font-size: 3vw;
+    & .developer{
+      background: linear-gradient(90deg, $sub-color 55%, rgb(0, 128, 233) 60%);
+      background-clip: text;
+      color: transparent;
     }
-    
-    .tertiary_text{
-        color: $lightgrey_color;
-        font-weight: bolder;
-        font-size: 2.5vw;
+  }
+
+  .tertiary_text {
+    color: rgba(255, 255, 255, 0.616);
+    font-weight: bolder;
+    font-size: $text;
+  }
+  .links-list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 15vw;
+    position: relative;
+    margin-left: -4vw;
+    margin-top: 1vh;
+    & .icon-home {
+      color: $sub-color;
+      & .icon {
+        font-size: $subheading;
+      }
+      &:hover {
+        color: $sub-color;
+      }
     }
-    .links-list{
-        display: flex;
-        justify-content: space-evenly;
-        width: 15vw;
-        position: relative;
-        margin-left: -2vw;
-        margin-top: 1vh;
-        & .icon-home{
-            color: $darkgreen_color;
-            & .icon{
-                font-size: 1.3vw;
-            }
-            &:hover{
-                color: $lightgreen_color;
-            }
-        }
-    }
+  }
 }
 
 @media only screen and (max-width: 800px) {
-    .text_container{
-        font-family: inherit;
-        width: 100vw;
-        .primary_text{
-            color: white;
-            font-weight: bolder;
-            font-size: 7vw;
-        }
-        .secondary_text{
-            color: $lightgreen_color;
-            font-weight: bolder;
-            font-size: 6vw;
-        }
-        .tertiary_text{
-            color: $lightgrey_color;
-            font-weight: bolder;
-            font-size: 5vw;
-        }
-    }
 }
-
-
-

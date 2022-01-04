@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './home_text.style.scss'
 
 export default function HomeText() {
@@ -12,8 +12,12 @@ export default function HomeText() {
             </div>
             <div>
                 <span className='tertiary_text'>a </span>
-                <span className='secondary_text'>Frontend Developer</span>
-                <span className='tertiary_text'>.</span>
+                <span className='secondary_text'>
+
+                    <span>Frontend | </span>
+                    <span className='react'>React </span>
+                    <div className='developer'>Developer.</div>
+                </span>
             </div>
         </div>
     )

@@ -1,5 +1,17 @@
-$grey_color: #474B4f;
-$lightgrey_color: #6B6E70;
-$black_color: #222629;
-$darkgreen_color: #61892F;
-$lightgreen_color: #86C232;
+$main-color: #222629;
+$tertiary-color: #474b4f;
+$sub-color: #61892f;
+
+
+$main-color: #0b0b08;
+$sub-color:  #f3f3f3;
+$tertiary-color: #933627;
+$subtertiary-color:  rgb(0, 128, 233);
+
+
+$heading: clamp(22px, 1em + 3vw, 52px);
+$subheading: clamp(20px, 1em + 2vw, 44px);
+$button: clamp(12px, 0.1em + 1vw, 20px);
+$text: clamp(12px, 1em + 1vw, 24px);
+$list: clamp(14px, 0.5em + 1vw, 26px);
+$sublist: clamp(12px, 0.4em + 0.8vw, 22px);

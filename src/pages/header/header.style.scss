@@ -1,100 +1,31 @@
-@import '../../colors.scss';
+@import "../../colors.scss";
 
-  .background-sec{
-    background-color: $darkgreen_color;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, $darkgreen_color 0%, $grey_color 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    opacity: 0.9;
-    height: 100vh;
-    width: 30vw;
-    position: absolute;
-    right: 0%;
-    top:0%;
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-    z-index: -1;
-    transition: 0.4s ease-in-out;
-    &.project-section{
-    width: 20vw;
-    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
-    transition: 0.4s ease-in-out;
-    }
-}
-
-.link-style{
-text-decoration: none;
-}
-
-.btn-section{
-    position: absolute;
-    top: 15%;
-    right: 0%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 25vw;
-    height: 70vh;
-    align-items: center;
-    transition: all 0.3s ease-in 0.1s;
-    &.project{
-      position: absolute;
-      top: 20%;
-      right: -2.5%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 60vh;
-      align-items: center;
-      transition: all 0.3s ease-in 0.1s;
-    }
-  }
-
-
-  @media only screen and (max-width: 800px) {
-    .background-sec{
-      background-color: $darkgreen_color;  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, $darkgreen_color 0%, $grey_color 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      opacity: 1;
-      height: 100vh;
-      width: 100vw;
-      position: absolute;
-      right: 0;
-      top: 0vh;
-      clip-path: polygon(0 90%, 100% 90%, 100% 100%, 0% 100%);
-      z-index: 1;
-      &.project-section{
-          background-color: $darkgreen_color;  /* Chrome 10-25, Safari 5.1-6 */
-          background: linear-gradient(to right, $darkgreen_color 0%, $grey_color 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-          opacity: 1;
-          height: 100vh;
-          width: 100vw;
-          position: absolute;
-          right: 0;
-          top: 0vh;
-          clip-path: polygon(0 90%, 100% 90%, 100% 100%, 0% 100%);
-      }
-  }
-
-  .btn-section{
-    position: absolute;
-    top: 92vh;
+.header-container{
+  position: absolute;
+  right: 0;
+  top: 5%;
+  width: 40vw;
+  padding: 1vh 0%;
+  background-color: rgba(39, 39, 39, 0.356);
+  
+  margin-left: auto;
+  z-index: 100;
+  backdrop-filter: blur(6px);
+  & .btn-section {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100vw;
-    height: fit-content;
     align-items: center;
-    transition: all 0.3s ease-in 0.1s;
-    z-index: 2;
-    &.project{
-      position: absolute;
-      top: 92vh;
-      right: 0vw;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      width: 100vw;
-      height: fit-content;
-      align-items: center;
-      transition: all 0.3s ease-in 0.1s;
-    }
   }
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 800px) {
 }

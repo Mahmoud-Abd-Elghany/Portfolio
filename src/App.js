@@ -14,10 +14,10 @@ function App() {
   return (
     <Router>
       <div className ='App' onMouseMove={mouseMoveHandler}>
-            <Container/>
             <Header/>
-            <div className="sticky-1" style = {{transform: `translate(${x/50}px, ${y/50}px)`}}></div>
-            <div className="sticky-2" style = {{transform: `translate(${-(x/50)}px, ${y/50}px)`}}></div>
+            <Container/>
+            <div className="contribute">Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/s/photos/abstract?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
+  
       </div>
     </Router>
   );

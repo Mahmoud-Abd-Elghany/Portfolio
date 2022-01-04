@@ -1,2 +1,3 @@
 to be added:
- - Responsivness
+ - Typography Responsivness
+ - color change

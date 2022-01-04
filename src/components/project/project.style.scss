@@ -1,116 +1,133 @@
-@import '../../colors.scss';
-$transition-time: 0.3s;
+@import "../../colors.scss";
+$transition-time: 0.2s;
 
-.container{
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 3;
+  color: $sub-color;
+  .card-container {
+    height: 20vh;
+    width: 20vh;
+    box-shadow: 2px 2px 4px black;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    .card-container{
-        height: 20vh;
-        width: 20vh;
-        box-shadow: 2px 2px 4px black;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        transition: all 0.2s ease-in-out;
-        overflow: hidden;
-        &.expanded{
-            width: 100%;
-            height: 35vh;
-            transition: all $transition-time ease-in-out;
-            background: linear-gradient(135deg, $grey_color 0%, $black_color 80%, $black_color 92%);
-        }
-        &:hover{
-            transform: scale(0.99);
-            box-shadow: 0px 0px 0px black;
-        }
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    &.expanded {
+      width: 90vw;
+      height: 35vh;
+      backdrop-filter: blur(5px);
+      
+      transition: all $transition-time ease-in-out;
+      background: linear-gradient(
+        135deg,
+        $main-color 0%,
+        transparent 80%,
+      );
+    }
+    &:hover {
+      transform: scale(0.975);
+      box-shadow: 0px 0px 0px black;
+    }
 
-        .img-section{
-            height: 100%;
-            width: 100%;
-            background-position: center;
-            background-size: cover;
-            transition: all $transition-time ease-in-out;
-            .background-hover{
-                background: $black_color;
-                opacity: 0;
-            }
-            &:hover{
-                opacity: 1;
-                transition: all 0.3s ease-in-out;
-                cursor: pointer;
-            }
-            &.expanded{
-                width: 60%;
-                transition: all $transition-time ease-in-out;
-            }
-        }
+    .img-section {
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      transition: all $transition-time ease-in-out;
+      .background-hover {
+        background: $main-color;
+        opacity: 0;
+      }
+      &:hover {
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      }
+      &.expanded {
+        width: 60%;
+        transition: all $transition-time ease-in-out;
+      }
     }
-    .title{
-        border-left: 0.4vh solid $darkgreen_color;
-        font-size: 4vw;
-        height: 13vh;
-        color: white;
-        margin-left: 2vw;
-        padding-left: 2vw;
-        font-weight: 600;
-        transition-delay: 0.2s;
-        &.expanded{
-            font-size: 0;
-            border-left: 0px solid white;
-        }
+  }
+  & .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    border-left: 4px solid $sub-color;
+    font-size: $subheading;
+    height: fit-content;
+    color: $sub-color;
+    margin-left: 2vw;
+    padding-left: 2vw;
+    font-weight: 600;
+    transition-delay: 0.1s;
+    &.expanded {
+      font-size: 0;
+      border-left: 0px solid white;
     }
+  }
 }
 
 @media only screen and (max-width: 800px) {
-    .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .card-container{
-            height: 14vh;
-            width: 14vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            transition: all 0.2s ease-in-out;
-            &.expanded{
-                width: 60vw;
-                height: 80vh;
-                background: linear-gradient(135deg, $grey_color 0%, $black_color 80%, $black_color 92%);
-            }
-            &:hover{
-                transform: scale(0.99);
-                box-shadow: 0px 0px 0px black;
-            }
-            .img-section{
-                &.expanded{
-                    height: 35%;
-                    width: 100%;
-                }
-            }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .card-container {
+      height: 14vh;
+      width: 14vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s ease-in-out;
+      &.expanded {
+        width: 60vw;
+        height: 80vh;
+        background: linear-gradient(
+          135deg,
+          $tertiary-color 0%,
+          $main-color 80%,
+          $main-color 92%
+        );
+      }
+      &:hover {
+        transform: scale(0.99);
+        box-shadow: 0px 0px 0px black;
+      }
+      .img-section {
+        &.expanded {
+          height: 35%;
+          width: 100%;
         }
-        .title{
-            border-left: 0vh solid $darkgreen_color;
-            border-top: 0.4vh solid $darkgreen_color;
-            font-size: 5vw;
-            height: fit-content;
-            margin-left: 0vw;
-            padding-left: 0vw;
-            margin-top: 2vh;
-            padding-top: 1vh;
-            transition-delay: 0.2s;
-            &.expanded{
-                height: 0;
-                padding: 0;
-                margin: 0;
-                font-size: 0;
-                border-left: 0px solid white;
-            }
-        }
+      }
     }
+    .title {
+      border-left: 0vh solid $sub-color;
+      border-top: 0.4vh solid $sub-color;
+      font-size: 5vw;
+      height: fit-content;
+      margin-left: 0vw;
+      padding-left: 0vw;
+      margin-top: 2vh;
+      padding-top: 1vh;
+      transition-delay: 0.2s;
+      &.expanded {
+        height: 0;
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+        border-left: 0px solid white;
+      }
+    }
+  }
 }
-

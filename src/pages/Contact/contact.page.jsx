@@ -36,13 +36,15 @@ function ContactPage() {
         });
     }
     return (
-        <div className='contact-container'>
-            <form onSubmit={submitHandler} className='form-container'>
-                <TextField type = 'email' placeholder='Email' onChange={changeHandler} value={formData.email}/>
-                <TextField type = 'input' placeholder='Name' onChange={changeHandler} value={formData.name}/>
-                <TextField type = 'textarea' placeholder='Message' onChange={changeHandler} value={formData.message}/>
-                <button className='send-btn' type='submit'>Send <i class="fas fa-paper-plane"></i></button>
-            </form>
+        <div className='contact-page'>
+            <div className='contact-container'>
+                <form onSubmit={submitHandler} className='form-container'>
+                    <TextField type = 'email' placeholder='Email' onChange={changeHandler} value={formData.email}/>
+                    <TextField type = 'input' placeholder='Name' onChange={changeHandler} value={formData.name}/>
+                    <TextField type = 'textarea' placeholder='Message' onChange={changeHandler} value={formData.message}/>
+                    <button className='send-btn' type='submit'>Send <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
         </div>
     )
 }
