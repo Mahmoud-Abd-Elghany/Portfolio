@@ -30,7 +30,7 @@ export const skillsData = [
     },
     {
         name: 'Responsive Design',
-        icon:'fa-hand-pointer',
+        icon:'fas fa-expand',
         sub: [],
     },
     {
