@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './home_text.style.scss'
 
 export default function HomeText() {

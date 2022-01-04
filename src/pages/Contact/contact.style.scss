@@ -29,6 +29,8 @@
     }
     & .send-btn {
       width: 20%;
+      min-width: 48px;
+      min-height: 40px;
       margin-left: auto;
       margin-right: 5% ;
       font-size: $button;
@@ -53,18 +55,10 @@
 
 
 @media only screen and (max-width: 800px) {
-  .contact-container {
-    width: 100vw;
-    height: 90vh;
-    & .form-container {
-      width: 85%;
-      height: 85%;
-      padding: 0vw 2vw;
-      & .send-btn {
-        margin-top: 0vw;
-        margin-left: 5%;
-        font-size: 18px;
-      }
+  .contact-page{
+    & .contact-container {
+        width: 90%;
+        height: 80%;
     }
   }
 }

@@ -21,7 +21,7 @@ function ContactPage() {
     }
 
     const submitHandler = (e) => {
-        console.log(`'${process.env.REACT_APP_SERVICE_ID}'`)
+        //console.log(`'${process.env.REACT_APP_SERVICE_ID}'`)
         e.preventDefault();
         emailjs.send('service_afonath', 'template_72pid4p', formData, process.env.REACT_APP_USER_ID)
             .then((result) => {
@@ -42,7 +42,7 @@ function ContactPage() {
                     <TextField type = 'email' placeholder='Email' onChange={changeHandler} value={formData.email}/>
                     <TextField type = 'input' placeholder='Name' onChange={changeHandler} value={formData.name}/>
                     <TextField type = 'textarea' placeholder='Message' onChange={changeHandler} value={formData.message}/>
-                    <button className='send-btn' type='submit'>Send <i class="fas fa-paper-plane"></i></button>
+                    <button className='send-btn' type='submit'>Send <i className="fas fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>

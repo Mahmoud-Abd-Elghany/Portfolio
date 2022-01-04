@@ -9,29 +9,30 @@
   color: $sub-color;
   .skills-container {
     width: 100%;
-    height: 70%;
+    height: 80%;
     padding: 0%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    column-gap: 12vw;
+    column-gap: 11%;
+    row-gap: 1%;
     flex-wrap: wrap;
     .skill-list {
+      @include border-gradient;
       display: flex;
-      justify-content: center;
-      width: 11%;
-      min-width: 10%;
       flex-direction: column;
+      justify-content: center;
+      width: 12vw;
+      min-width: 120px;
       row-gap: 0.5vh;
-      border: 2px solid black;
-      border-radius: 1%;
-      height: 6vw;
-      min-height: 120px;
+      height: 8vw;
+      min-height: 100px;
       padding: 1%;
       backdrop-filter: blur(4px);
       background-color: rgba(0, 0, 0, 0.411);
       transition: 0.3s ease-in-out backdrop-filter;
+      text-align: center;
       &:hover{
         backdrop-filter: blur(0px);
       }
@@ -72,11 +73,13 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   .skills-page {
     & .skills-container {
+      column-gap: 2%;
       & .skill-list {
-        width: 35%;
+        width: 10%;
+        min-width: 100px;
       }
     }
   }

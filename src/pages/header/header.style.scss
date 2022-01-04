@@ -1,13 +1,12 @@
 @import "../../colors.scss";
 
 .header-container{
-  position: absolute;
+  position: sticky;
   right: 0;
   top: 5%;
   width: 40vw;
   padding: 1vh 0%;
   background-color: rgba(39, 39, 39, 0.356);
-  
   margin-left: auto;
   z-index: 100;
   backdrop-filter: blur(6px);
@@ -19,6 +18,12 @@
     justify-content: space-evenly;
     align-items: center;
   }
+  & .bars{
+    display: none;
+    color: $subtertiary-color;
+    font-size: $subheading;
+    
+  }
 }
 
 
@@ -28,4 +33,37 @@ a {
 }
 
 @media only screen and (max-width: 800px) {
+  .header-container{
+    position: absolute;
+    right: 0;
+    top: 5%;
+    width: fit-content;
+    padding: 1vh 2vw;
+    backdrop-filter: blur(10px);
+    transition: all ease-in-out 0.1s;
+    &.active{
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.281);
+    }
+    & .btn-section {
+      display: none;
+      height: 100%;
+      &.active{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        opacity: 0.8;
+        
+      }
+    }
+    & .bars{
+      display: block;
+      width: fit-content;
+      cursor: pointer;
+      margin-left: auto;
+    }
+  }
 }

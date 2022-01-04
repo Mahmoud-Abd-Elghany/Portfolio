@@ -82,6 +82,7 @@ $transition-time: 0.2s;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
     .card-container {
       height: 14vh;
       width: 14vh;
@@ -91,14 +92,8 @@ $transition-time: 0.2s;
       justify-content: space-between;
       transition: all 0.2s ease-in-out;
       &.expanded {
-        width: 60vw;
-        height: 80vh;
-        background: linear-gradient(
-          135deg,
-          $tertiary-color 0%,
-          $main-color 80%,
-          $main-color 92%
-        );
+        width: 55vw;
+        height: 90vh;
       }
       &:hover {
         transform: scale(0.99);
@@ -106,7 +101,7 @@ $transition-time: 0.2s;
       }
       .img-section {
         &.expanded {
-          height: 35%;
+          height: 40%;
           width: 100%;
         }
       }

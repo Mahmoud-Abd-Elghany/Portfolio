@@ -7,9 +7,10 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0% 5%;
   & .home-container {
     height: fit-content;
-    width: 70%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,8 +19,8 @@
     padding: 2% 5%;
     position: relative;
     z-index: 2;
-    border: 5px solid;
-    border-image: linear-gradient(-120deg, $tertiary-color, $subtertiary-color) 1;
+    @include border-gradient;
+    border-width: 5px;
     backdrop-filter: blur(4px);
     padding: 2%;
     background: rgba(0, 0, 0, 0.438);
@@ -29,8 +30,10 @@
     & .sub-text {
       font-size: $text;
       color: $sub-color;
-      width: 90%;
-      padding: 2%;
+      // width: 80%;
+      min-width: 80%;
+      max-width: 95%;
+      padding: 1%;
       opacity: 0.8;
       &::before {
         content: open-quote;
@@ -70,9 +73,7 @@
 
 
 @media only screen and (max-width: 800px) {
-  .home-container {
-    .sub-text {
-      width: 100%;
-    }
-  }
+    // .sub-text {
+    //   width: 100%;
+    // }
 }

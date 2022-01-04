@@ -3,7 +3,6 @@ import { addExpandedClass } from '../../project/project.component'
 import './desc-section.style.scss'
 
 function DescSection({expanded, name, desc}) {
-    console.log(name)
     return (
             <div className={addExpandedClass('desc-section', expanded)}>
                 <div className={addExpandedClass('desc-headline', expanded)}>{name}</div>

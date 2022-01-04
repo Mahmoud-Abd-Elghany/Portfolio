@@ -7,7 +7,6 @@ import './project.style.scss'
 
 const Project = ({projectData:{name, desc, tech, links, img}}) => {
     const [expanded, setExpanded] = useState(false);
-    console.log('ima:', img)
     return (
         <div className='container'>
             <div className={addExpandedClass('card-container', expanded)}>

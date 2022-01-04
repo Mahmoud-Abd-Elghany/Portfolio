@@ -3,7 +3,7 @@ import './textfield.style.scss'
 
 function TextField({type, placeholder, onChange, value}) {
     return (
-            <div class="form__group field">
+            <div className="form__group field">
                 {
                     type === 'textarea'?
                     <textarea type={`${type}`} className='form__field message__field' name={`${placeholder}`} id={`${placeholder.toLowerCase()}`} placeholder='Enter you message here...' required onChange={onChange} value={value}/>

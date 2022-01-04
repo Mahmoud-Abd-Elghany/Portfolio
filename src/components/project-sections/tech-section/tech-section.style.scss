@@ -12,7 +12,7 @@
   text-align: center;
   gap: 0vw 0.5vw;
   background-color: transparent;
-  font-size: $text;
+  font-size: $sublist;
   font-weight: 500;
   opacity: 0;
   transform: scale(0);
@@ -33,10 +33,10 @@
     width: 100%;
     background: transparent;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
     text-align: center;
+    font-size: $list;
     & .tech {
       width: 30%;
     }
