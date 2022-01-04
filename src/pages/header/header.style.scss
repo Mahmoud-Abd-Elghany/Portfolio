@@ -39,13 +39,13 @@ a {
     top: 5%;
     width: fit-content;
     padding: 1vh 2vw;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(4px);
     transition: all ease-in-out 0.1s;
     &.active{
       top: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0, 0, 0, 0.281);
+      background: rgba(0, 0, 0, 0.61);
     }
     & .btn-section {
       display: none;
