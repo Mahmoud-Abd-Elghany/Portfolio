@@ -39,8 +39,8 @@ a {
     top: 5%;
     width: fit-content;
     padding: 1vh 2vw;
-    backdrop-filter: blur(0.5px);
-    transition: all ease-in-out 0.1s;
+    backdrop-filter: blur(2px);
+    // transition: all ease-in-out 0.1s;
 
     &.active{
       width: 100vw;
