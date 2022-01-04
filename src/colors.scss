@@ -14,7 +14,7 @@ $subheading: clamp(20px, 1em + 2vw, 44px);
 $button: clamp(12px, 0.1em + 1vw, 20px);
 $text: clamp(12px, 1em + 1vw, 24px);
 $list: clamp(14px, 0.5em + 1vw, 26px);
-$sublist: clamp(12px, 0.4em + 0.8vw, 22px);
+$sublist: clamp(10px, 0.2em + 0.8vw, 22px);
 
 @mixin border-gradient {
     border: 2px solid;

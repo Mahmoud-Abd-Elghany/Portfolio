@@ -1,7 +1,7 @@
 @import "../../colors.scss";
 
 .header-container{
-  position: sticky;
+  position: absolute;
   right: 0;
   top: 5%;
   width: 40vw;
@@ -39,20 +39,19 @@ a {
     top: 5%;
     width: fit-content;
     padding: 1vh 2vw;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(0.5px);
     transition: all ease-in-out 0.1s;
 
     &.active{
       top: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.651);
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.753);
     }
 
     & .btn-section {
       display: none;
       height: 100%;
-      
       &.active{
         display: flex;
         align-items: center;

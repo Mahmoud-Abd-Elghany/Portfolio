@@ -82,7 +82,7 @@ $transition-time: 0.2s;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100را;
+    height: 100%;
     .card-container {
       height: 14vh;
       width: 14vh;
@@ -92,7 +92,7 @@ $transition-time: 0.2s;
       justify-content: space-between;
       transition: all 0.2s ease-in-out;
       &.expanded {
-        width: 55vw;
+        width: 100%;
         height: 90vh;
       }
       &:hover {

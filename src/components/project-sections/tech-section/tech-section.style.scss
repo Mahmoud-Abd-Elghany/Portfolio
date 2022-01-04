@@ -36,9 +36,12 @@
     flex-direction: row;
     justify-content: space-evenly;
     text-align: center;
-    font-size: $list;
+    font-size: $sublist;
+    column-gap: 5px;
+    padding-top: 1%;
     & .tech {
-      width: 30%;
+      width: 25%;
+      display: inline-block;
     }
     &.expanded {
       height: fit-content;
