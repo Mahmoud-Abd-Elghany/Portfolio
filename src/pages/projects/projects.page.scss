@@ -12,10 +12,21 @@
         align-items: flex-start;
         justify-content: center;
         flex-direction:column;
-        flex-wrap:nowrap;
+        flex-wrap:wrap;
         gap: 5%;
         z-index: 3;
     }
+}
+
+.hidden{
+    display: none;
+    transform: scale(0);
+    transition: 0.5s ease-in all;
+}
+.visible{
+    display: block;
+    transform: scale(1);
+    transition: 0.5s ease-in all;
 }
 
 @media only screen and (max-width: 800px) {
@@ -31,7 +42,7 @@
             align-items: center;
             justify-content: center;
             flex-direction:row;
-            flex-wrap:nowrap;
+            flex-wrap:wrap;
             gap: 5%;
             overflow-y:auto;
         }

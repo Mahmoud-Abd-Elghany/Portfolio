@@ -20,7 +20,7 @@ $transition-time: 0.2s;
     backdrop-filter: blur(4px);
     &.expanded {
       width: 90vw;
-      height: 35vh;
+      height: 45vh;
       backdrop-filter: blur(5px);
       
       transition: all $transition-time ease-in-out;

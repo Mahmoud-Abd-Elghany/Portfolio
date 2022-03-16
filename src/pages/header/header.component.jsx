@@ -9,7 +9,7 @@ function Header() {
     const [headerActive, setHeaderActive] = useState(false);
     return (
         <div className={headerActive? "header-container active" : "header-container"}>
-            <i class="fas fa-bars bars" onClick={() => setHeaderActive(!headerActive)}></i>
+            <i className="fas fa-bars bars" onClick={() => setHeaderActive(!headerActive)}></i>
             <div className={headerActive? "btn-section active" : "btn-section"} onClick={() => setHeaderActive(false)}>
                 <Link className="link-style" to="/">
                     <Button active={path === "/"}>

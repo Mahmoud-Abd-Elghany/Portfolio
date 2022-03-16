@@ -7,7 +7,7 @@ function TechSection({expanded, tech}) {
             {
                 tech.map(tech => {
                     return (
-                        <div className='tech'>
+                        <div key={tech} className='tech'>
                         &bull; {tech}
                         </div>
                     )

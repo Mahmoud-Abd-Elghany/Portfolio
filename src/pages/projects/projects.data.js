@@ -19,6 +19,26 @@ const projects = [
             github: 'https://github.com/Mahmoud-Abd-Elghany/Piclytic',
         }
     },
+    {
+        name: 'Blogr',
+        desc: 'A landing page developed with Vanilla javascript',
+        tech:['Javascript', 'Css', 'Mobile Responsive'],
+        img:'https://i.ibb.co/QJ6HXZC/Screenshot-2022-03-01-052723.png',
+        links: {
+            demo: 'https://blogr-vanilla.herokuapp.com/',
+            github: 'https://github.com/Mahmoud-Abd-Elghany/blogr',
+        }
+    },
+    {
+        name: 'Tetris',
+        desc: 'A Tetris game using vanilla Javascript',
+        tech:['Javascript', 'Css', 'HTML'],
+        img:'https://i.ibb.co/hF39LrL/download.png',
+        links: {
+            demo: 'https://mahmoud-abd-elghany.github.io/Tetris/',
+            github: 'https://github.com/Mahmoud-Abd-Elghany/Tetris',
+        }
+    },
 ]
 
 export default projects
