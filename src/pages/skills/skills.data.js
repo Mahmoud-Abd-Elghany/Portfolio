@@ -58,4 +58,9 @@ export const skillsData = [
             },
         ]
     },
+    {
+        name: 'OOP',
+        icon:'',
+        sub:[],
+    },
 ]
