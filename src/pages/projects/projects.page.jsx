@@ -7,16 +7,15 @@ function ProjectsPage(){
     const [expanded, setExpanded] = useState("");
     const [active, setActive] = useState(false);
     return (
-        <div className='projects-container'>
+        <div className={active? 'projects-container expanded': 'projects-container'}>
             <div className='projects-list'>
             {
                 projects.map( projectData => {
                     return (
                         <div className={
                             active? expanded===projectData.name? "visible": "hidden" : "visible"
-                        }>
-                            <Project
-                                key={projectData.name} 
+                        } key = {projectData.key}>
+                            <Project 
                                 projectData={projectData} 
                                 expanded={expanded} 
                                 active={active}

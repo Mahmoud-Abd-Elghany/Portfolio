@@ -7,6 +7,7 @@ $transition-time: 0.2s;
   align-items: center;
   z-index: 3;
   color: $sub-color;
+  width: 100%;
   .card-container {
     height: 20vh;
     width: 20vh;
@@ -21,7 +22,7 @@ $transition-time: 0.2s;
     &.expanded {
       width: 90vw;
       height: 45vh;
-      backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px) brightness(50%);
       
       transition: all $transition-time ease-in-out;
       background: linear-gradient(

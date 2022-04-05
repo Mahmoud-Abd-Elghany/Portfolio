@@ -13,22 +13,22 @@ function Header() {
             <div className={headerActive? "btn-section active" : "btn-section"} onClick={() => setHeaderActive(false)}>
                 <Link className="link-style" to="/">
                     <Button active={path === "/"}>
-                    Home
+                     &#60;Home/&#62;
                     </Button>
                 </Link>
                 <Link className="link-style" to="/Projects" >
                     <Button active={path === "/Projects"}>
-                    Projects
+                    &#60;Projects/&#62;
                     </Button>
                 </Link>
                 <Link className="link-style" to="/Skills">
                     <Button active={path === "/Skills"}>
-                    Skills
+                    &#60;Skills/&#62;
                     </Button>
                 </Link>
                 <Link className="link-style" to="/Contact">
                     <Button active={path === "/Contact"}>
-                    Contact
+                    &#60;Contact/&#62;
                     </Button>
                 </Link>
             </div>  

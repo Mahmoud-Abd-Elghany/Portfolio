@@ -3,17 +3,38 @@
 .App {
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  // overflow: hidden;
+  display: flex;
+  flex-direction: row;
 }
 
-.contribute{
-  opacity: 0.4;
-  font-size: 10px;
-  position: absolute;
-  bottom: 0vh;
-  margin-top: auto;
-  color: white;
-  & a{
-    color: rgb(9, 131, 202);
-  }
+.text-appear {
+  opacity: 0;
+  transform: translateX(-30%);
+}
+
+.text-appear.text-appear-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 400ms ease-in-out;
+}
+
+.text-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.text-enter.text-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 1000ms;
+}
+
+.text-exit {
+  opacity: 0;
+}
+
+.background-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

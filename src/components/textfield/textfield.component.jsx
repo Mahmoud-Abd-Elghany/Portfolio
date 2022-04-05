@@ -1,19 +1,21 @@
 import React from 'react'
+import TextField from '@mui/material/TextField';
+import { styled } from '@mui/material/styles'
 import './textfield.style.scss'
 
-function TextField({type, placeholder, onChange, value}) {
+function TextFieldCustom({type, placeholder, onChange, value, multiline = false, minRows = 1}) {
     return (
-            <div className="form__group field">
-                {
-                    type === 'textarea'?
-                    <textarea type={`${type}`} className='form__field message__field' name={`${placeholder}`} id={`${placeholder.toLowerCase()}`} placeholder='Enter you message here...' required onChange={onChange} value={value}/>
-                    :
-                    <input type={`${type}`} className='form__field' name={`${placeholder}`} id={`${placeholder.toLowerCase()}`} placeholder={`${placeholder}...`} required onChange={onChange} value={value}/>
-                }
-                
-                <label for="name" className="form__label">{placeholder}</label>
-            </div>
+                <TextField id="custom-css-outlined-input" 
+                    label= {placeholder} 
+                    variant="filled"
+                    onChange={(e) => onChange(e)}
+                    value={value}
+                    type={type}
+                    multiline={multiline}
+                    minRows = {minRows}
+                    sx={{backgroundColor: "rgb(255, 255, 255)", fill: "white"}}
+                />
     )
 }
 
-export default TextField
+export default TextFieldCustom

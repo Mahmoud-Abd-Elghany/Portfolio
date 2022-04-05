@@ -19,7 +19,7 @@ function Container() {
                     classNames="fade"
                     >
                     <Switch location={location}>
-                        <Route exact path="/" component={Home}/>
+                        <Route exact index path="/" component={Home}/>
                         <Route path="/Projects" component={ProjectsPage}/>
                         <Route path="/Contact" component={ContactPage}/>
                         <Route path="/Skills" component={SkillsPage}/>

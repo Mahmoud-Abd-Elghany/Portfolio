@@ -3,29 +3,49 @@
 .custom-btn {
   cursor: pointer;
   display: flex;
+  flex-direction: column;
   font-family: inherit;
-  font-size: $button;
+  font-size: $text;
   font-weight: 550;
   justify-content: center;
   align-items: center;
   transition: all 0.1s;
-  width: 5vw;
+  width: fit-content;
   min-width: 48px;
   min-height: 40px;
   color: $sub-color;
   border: none;
   background-color: transparent;
   transition: transform 0.1s ease-in-out;
+  text-transform: capitalize;
+  &::after{
+    content: "";
+    transform-origin: center;
+    margin-top:3px;
+    height: 3px;
+    width: 100%;
+    transform: scaleX(0);
+    z-index: 2;
+    transition: all 0.2s ease-in;
+  }
 
-  &:hover{
-    transform: translate3d(2px, 2px , 1vw);
-    
+  &:hover {
+    color: $subtertiary-color;
+    transition: all 0.2s ease-in;
+    &::after{
+      transform: scaleX(1);
+      background-color: $subtertiary-color;
+      transition: all 0.2s ease-in;
+    }
   }
 
   &:active,
   &.inverted {
     color: $subtertiary-color;
     outline: none;
+    &::after{
+      visibility: hidden;
+    }
   }
 }
 

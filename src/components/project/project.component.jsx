@@ -5,7 +5,6 @@ import TechSection from '../project-sections/tech-section/tech-section.component
 import './project.style.scss'
 
 const Project = ({projectData:{name, desc, tech, links, img}, active, setActive, expanded, setExpanded}) => {
-    console.log(expanded === name)
     return (
         <div className='container'>
             <div className={addExpandedClass('card-container', expanded === name)}>
