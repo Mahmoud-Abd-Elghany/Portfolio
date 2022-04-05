@@ -13,8 +13,10 @@ const Project = ({projectData:{name, desc, tech, links, img}, active, setActive,
                     setActive(!active)
                     }}></div>
                     <DescSection expanded={expanded === name} name={name} desc={desc}/>
-                    <TechSection expanded = {expanded === name} tech= {tech}/>
-                    <LinksSection expanded = {expanded === name} links={links}/>
+                    <div className='lower-sec'>
+                        <TechSection expanded = {expanded === name} tech= {tech}/>
+                        <LinksSection expanded = {expanded === name} links={links}/>
+                    </div>
             </div>
             <div className={addExpandedClass('title', expanded)}>{name}</div>
         </div>

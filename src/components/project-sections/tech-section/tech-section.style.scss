@@ -4,7 +4,7 @@
 .tech-section {
   height: 60%;
   width: 0%;
-  background: transparent;
+  
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -15,42 +15,31 @@
   font-size: $sublist;
   font-weight: 500;
   opacity: 0;
-  transform: scale(0);
-  transition: all 0.1s ease-in-out 0.2s, opacity 0.2s ease-in-out;
+  transform-origin: left;
+  transform: scaleX(0);
   &.expanded {
-    width: 20%;
-    transform: scale(1,1);
+    width: 60%;
+    height: 100%;
+    transform: scaleX(1);
     opacity: 1;
-    padding: 0vw 1%;
-    border-left: $sub-color 2px solid;
-    border-right: $sub-color 2px solid;
+    padding: 0vw 5%;
+    background-color: rgba(0, 0, 0, 0.185);
+    transition: all 0.2s ease-in-out 0.1s, opacity 0.2s ease-in-out 0.1s;
   }
 }
 
 @media only screen and (max-width: 800px) {
   .tech-section {
-    height: 0%;
-    width: 100%;
-    background: transparent;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     font-size: $sublist;
-    column-gap: 5px;
-    padding-top: 1%;
-    & .tech {
-      width: 25%;
-      display: inline-block;
-    }
+
     &.expanded {
-      height: fit-content;
-      width: 80%;
+      height: 100%;
+      width: 60%;
       padding: 2% 0vw;
-      border-left: $sub-color 0px solid;
-      border-right: $sub-color 0px solid;
-      border-top: $sub-color 2px solid;
-      row-gap: 2vh;
     }
   }
 }

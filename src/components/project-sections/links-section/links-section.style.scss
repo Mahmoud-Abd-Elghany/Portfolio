@@ -2,18 +2,16 @@
 @import "../../../colors.scss";
 
 .links-section {
-  height: 0%;
-  width: 0%;
-  transition: all $transition-time ease-in-out;
-  display: none;
+  height: 100%;
+  width: 40%;
   &.expanded {
-    width: 10%;
-    height: 60%;
-    padding: 0 2%;
+    width: 40%;
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    background-color: rgba(31, 31, 31, 0.15);
   }
   .icon-custom {
     display: inline-block;
@@ -30,13 +28,7 @@
 @media only screen and (max-width: 800px) {
   .links-section {
     &.expanded {
-      height: 10%;
-      width: 60%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: row;
-      border-top: $sub-color 2px solid;
+      width: 30%;
     }
     .icon-custom {
       font-size: $sublist;
